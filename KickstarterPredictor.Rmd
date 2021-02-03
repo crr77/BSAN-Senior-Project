@@ -1,0 +1,28 @@
+---
+title: "Business Analytics Final Project"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+Reading in data
+```{r}
+raw_data <- read.csv(file = 'C:/Users/Spencer/Desktop/BSAN460/Final Project/KickStarter_Data.csv')
+```
+
+```{r}
+summary(raw_data)
+#checking for total NA values
+colSums(is.na(raw_data))
+```
+Removing NA Values with na.omit & checking to ensure they're removed
+```{r}
+clean_data <- na.omit(raw_data)
+colSums(is.na(clean_data))
+```
+
+```{r}
+
+```
+
